@@ -8,8 +8,7 @@ from datetime import datetime
 
 
 #load image
-image_path = R"C:\Users\goyok\Downloads\png-transparent-blue-snowflake-illustration-snowflake-snowflakes-file-winter-image-file-formats-text-thumbnail.png"
-
+image_path = # here comes your image path
 #image_path = r"{}".format(input("image full path here: ")) #windowsだとうまくいかないんだよなぁ
 
 img = Image.open(image_path).convert('RGBA')  # RGBAで読み込み
@@ -32,7 +31,7 @@ mesh = trimesh.Trimesh(vertices=verts, faces=faces)
 current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
 output_stl = f"output_model_{current_time}.stl"
 
-output_stl_path = R"C:\Users\goyok\Downloads\out-put.stl"+output_stl
+output_stl_path = "# here comes your saving path "+output_stl
 # STLファイルとして保存
 mesh.export(output_stl_path)
 print(f"a STL file has been generated: {output_stl}")
